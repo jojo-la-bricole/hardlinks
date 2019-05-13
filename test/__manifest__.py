@@ -5,7 +5,7 @@
     'category': 'Test',
     'description': """
     """,
-    'depends': ['basek'],
+    'depends': ['base'],
     'data': [
     ],
     'installable': True,
