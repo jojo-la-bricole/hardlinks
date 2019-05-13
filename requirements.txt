@@ -2,3 +2,4 @@ cdiff
 six
 gevent
 passlib
+pyserial
