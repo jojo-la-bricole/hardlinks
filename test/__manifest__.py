@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Test',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'category': 'Test',
     'description': """
     """,
