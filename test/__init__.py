@@ -1,14 +1,28 @@
+import logging
 import os
 import uuid
 
 from os.path import join as opj
 
-target = '/home/odoo/data/filestore/%s/ff' % os.environ['PGDATABASE']
-for i, fname in os.listdir(target):
-    if i == 0:
-        os.rename(opj(target, fname), opj(target, fname) + '.renamed')
-    else:
-        os.unlink(opj(target, fname))
+_logger = logging.getLogger(__name__)
 
-with open(opj(target, 'new.%s' % uuid.uuid4())) as f:
-    f.write('new')
+db = os.environ['PGDATABASE']
+build = os.environ.get('BUILD')
+
+if not build:
+    _logger.info("BUILD not deteted")
+else:
+    target = '/home/odoo/data/filestore/%s/ff' % db
+    files = os.listdir(target)
+    _logger.info("Got files: %s", files)
+    for i, fname in files:
+        if i == 0:
+            _logger.info("RENAME")
+            os.rename(opj(target, fname), opj(target, fname) + '.renamed')
+        else:
+            _logger.info("UNKLINK")
+            os.unlink(opj(target, fname))
+
+    _logger.info("CREATE")
+    with open(opj(target, 'new.%s' % uuid.uuid4())) as f:
+        f.write('new')
