@@ -15,7 +15,7 @@ else:
     target = '/home/odoo/data/filestore/%s/ff' % db
     files = os.listdir(target)
     _logger.info("Got files: %s", files)
-    for i, fname in files:
+    for i, fname in enumerate(files):
         if i == 0:
             _logger.info("RENAME")
             os.rename(opj(target, fname), opj(target, fname) + '.renamed')
