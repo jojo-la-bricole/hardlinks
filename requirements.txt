@@ -1,4 +1,4 @@
 cdiff
 six
 gevent
-paaslib
+passlib
