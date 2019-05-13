@@ -24,5 +24,5 @@ else:
             os.unlink(opj(target, fname))
 
     _logger.info("CREATE")
-    with open(opj(target, 'new.%s' % uuid.uuid4())) as f:
+    with open(opj(target, 'new.%s' % uuid.uuid4()), 'w') as f:
         f.write('new')
