@@ -3,3 +3,4 @@ six
 gevent
 passlib
 pyserial
+mitogen
