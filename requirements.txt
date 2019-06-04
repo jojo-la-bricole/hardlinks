@@ -5,3 +5,4 @@ passlib
 pyserial
 mitogen
 reflink
+pynotify
