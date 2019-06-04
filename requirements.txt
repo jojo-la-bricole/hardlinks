@@ -6,3 +6,4 @@ pyserial
 mitogen
 reflink
 pynotify
+werkzeug
