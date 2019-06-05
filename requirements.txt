@@ -6,4 +6,5 @@ pyserial
 mitogen
 reflink
 pynotify
-werkzeug==0.1
+werkzeug
+js
