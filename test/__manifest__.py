@@ -9,4 +9,5 @@
     'data': [
     ],
     'installable': True,
+    'license': "MINE",
 }
